@@ -163,7 +163,7 @@ const experiences = [
       "Gained extensive experience in problem-solving and programming.",
       "Developed strong leadership, team-building, communication, and project management skills.",
       "Installed a Device-Net communication network to facilitate communication between robots.",
-      "Worked across multiple locations: Bhubaneswar (2018-2021), Gurugram (2021-2023), Bhubaneswar (2023-2026).",
+      "Worked location:Gurugram (2021-2023).",
     ],
   },
 ];
