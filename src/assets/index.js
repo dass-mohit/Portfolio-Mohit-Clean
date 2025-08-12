@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo2.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -29,6 +29,7 @@ import threejs from "./tech/threejs.svg";
 import firstTestimonial from './Tars Ken.webp';
 import secondTestimonial from './image.webp';
 import thirdTestimonial from './third testimonial.webp'
+import maruti from './company/maruti.png'
 
 export {
   logo,
@@ -50,6 +51,7 @@ export {
   firstTestimonial,
   secondTestimonial,
   thirdTestimonial,
+  maruti,
   gsap,
   framer,
   figma,

@@ -51,6 +51,7 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
+  const scrollContainerRef = useRef(null);
 
   // Heading Animation
   useGsap(headingRef, {
@@ -63,6 +64,27 @@ const About = () => {
     from: { opacity: 0, y: 50 },
     to: { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" },
   }, 0.3);
+
+  // Horizontal scroll with mouse wheel
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+      const scrollAmount = e.deltaY * 2; // Adjust scroll speed
+      container.scrollTo({
+        left: container.scrollLeft + scrollAmount,
+        behavior: 'smooth'
+      });
+    };
+
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
 
   return (
     <>
@@ -77,10 +99,29 @@ const About = () => {
         scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
       </p>
 
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className="mt-20 w-screen -mx-[50vw] left-1/2 relative">
+        <div 
+          ref={scrollContainerRef}
+          className="overflow-x-auto pb-4 scrollbar-hide"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
+          <div className="flex gap-10 min-w-max px-8">
+            {services.map((service, index) => (
+              <div key={service.title} className="flex-shrink-0">
+                <ServiceCard index={index} {...service} />
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Left gradient blur */}
+        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-primary to-transparent pointer-events-none z-10"></div>
+        
+        {/* Right gradient blur */}
+        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-primary to-transparent pointer-events-none z-10"></div>
       </div>
     </>
   );

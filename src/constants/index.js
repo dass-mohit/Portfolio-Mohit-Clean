@@ -16,7 +16,7 @@ import {
   express,
   aws,
   mui,
-  
+  maruti,
   gsap,
   framer,
   figma,
@@ -35,17 +35,13 @@ import {
 } from '../assets'
 
 
-// Import Tekisky separately
-import tekisky from "../assets/company/tekisky.png";
-
-
 export const navLinks = [
 
 
   {
     id: "about",
     title: "About",
-    
+
   },
   {
     id: "work",
@@ -72,6 +68,10 @@ const services = [
   },
   {
     title: "Ui UX Designer",
+    icon: creator,
+  },
+  {
+    title: "Video Editor & Photographer",
     icon: creator,
   },
 ];
@@ -102,7 +102,7 @@ const technologies = [
     icon: framer,
   },
 
- 
+
   {
     name: "Three JS",
     icon: threejs,
@@ -148,22 +148,22 @@ const technologies = [
     name: "git",
     icon: git,
   },
- 
+
 
 ];
 
 const experiences = [
   {
-    title: "Full-Stack Developer",
-    company_name: "Tekisky",
-    icon: tekisky,
+    title: "Junior Engineer",
+    company_name: "Maruti Suzuki India Limited",
+    icon: maruti,
     iconBg: "#383E56",
-    date: "Jan 2023 - present",
+    date: "2021 - 2023",
     points: [
-      "Developing and maintaining web applications using MERN technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Gained extensive experience in problem-solving and programming.",
+      "Developed strong leadership, team-building, communication, and project management skills.",
+      "Installed a Device-Net communication network to facilitate communication between robots.",
+      "Worked across multiple locations: Bhubaneswar (2018-2021), Gurugram (2021-2023), Bhubaneswar (2023-2026).",
     ],
   },
 ];
@@ -177,29 +177,13 @@ const testimonials = [
     company: "QuickMart",
     image: firstTestimonial,
   },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Mohit does.",
-    name: "Abdul Raheman",
-    designation: "Ecommerce Business",
-    company: "justbuyz",
-    image: secondTestimonial,
-  },
-  {
-    testimonial:
-      "After Mohit optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "James Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: thirdTestimonial,
-  },
 ];
 
 const projects = [
   {
-    name: "Tekisky Mart",
+    name: "Employee Management System",
     description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+      "A comprehensive employee management system that allows organizations to manage employee data, track attendance, handle payroll, and streamline HR processes efficiently.",
     tags: [
       {
         name: "react",
@@ -217,56 +201,32 @@ const projects = [
         name: "mongodb",
         color: "green-text-gradient",
       },
- 
+
     ],
     image: project2,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dass-mohit/Employee-Management-System",
   },
+
   {
-    name: "GearXpert",
+    name: "AI Resume and JD Match",
     description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
+      "An intelligent system that analyzes resumes and job descriptions to provide matching scores and recommendations, helping job seekers optimize their applications and recruiters find the best candidates.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "emailJs",
+        name: "AI/ML",
         color: "green-text-gradient",
       },
       {
-        name: "Gsap",
+        name: "NLP",
         color: "pink-text-gradient",
       },
     ],
-    image: gearXpert,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "GoGroove-Ecommerce",
-    description:
-      "Go-Groove is your ultimate destination for premium products across various categories. Whether you're a savvy shopper or a professional, enhance, and simplify your lifestyle—all in one place!",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-    ],
     image: project3,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dass-mohit/Ai-rusume-and-JD-match",
   },
 ];
 
