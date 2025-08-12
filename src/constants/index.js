@@ -228,6 +228,31 @@ const projects = [
     image: project3,
     source_code_link: "https://github.com/dass-mohit/Ai-rusume-and-JD-match",
   },
+  {
+    name: "Portfolio Website",
+    description:
+      "My personal portfolio website built with React and Three.js, showcasing my projects, skills, and experience with modern web technologies and interactive 3D elements.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "three.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "white-text-gradient",
+      },
+      {
+        name: "gsap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project2,
+    source_code_link: "https://github.com/dass-mohit/Portfolio-Mohit-Clean",
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
